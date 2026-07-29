@@ -2,7 +2,7 @@ class Solution {
 private:
     long long comb(long long n, long long m, long long k) {
         long long res = 1;
-        m = std::min(m, n - m);
+        m = min(m, n - m);
 
         for (long long i = 1; i <= m; i++) {
             res = res * (n - i + 1) / i;
@@ -64,10 +64,10 @@ public:
             return "";
         }
 
-        std::string mid =
+        string mid =
             s.length() % 2 != 0 ? std::string(1, s[partition]) : "";
-        std::string right = left;
-        std::reverse(right.begin(), right.end());
+        string right = left;
+        reverse(right.begin(), right.end());
 
         return left + mid + right;
     }
