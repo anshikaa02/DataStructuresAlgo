@@ -8,10 +8,12 @@ public:
         arr1.push_back(nums[0]);
         arr2.push_back(nums[1]);
         for (int i=2; i<n; i++){
-            if (arr1.back() > arr2.back() ) arr1.push_back(nums[i]);
+            if (arr1.back() > arr2.back() ) arr1.push_back(nums[i]); 
+            // also : if (a[a.size() - 1] > b[b.size() - 1])
             else arr2.push_back(nums[i]);
         }
-        for (int i=0; i < arr2.size(); i++){
+        for (int i=0; i < arr2.size(); i++){ 
+            // or insert function: a.insert(a.end(), b.begin(), b.end());
             arr1.push_back(arr2[i]);
         }
         return arr1;
